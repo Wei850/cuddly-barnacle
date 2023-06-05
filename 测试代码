@@ -1,0 +1,20 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import knn as K
+ 
+fight=(3,2,1,101,99,98)
+kiss=(104,100,81,10,5,2)
+filmtype=(1,1,1,2,2,2)
+plt.scatter(fight,kiss,c=filmtype)
+ 
+x=np.array([fight,kiss])
+y=np.array(filmtype)
+x=x.T
+print(x)
+print(y)
+ 
+xx=np.array([18,90])
+ 
+result = K.knn(xx,x,y,4)
+ 
+print('result:',result)
